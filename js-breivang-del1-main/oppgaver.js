@@ -56,6 +56,14 @@ console.log("Pris med moms:", pris + pris * MOMS, "kr")
 // høyden på Fløya (671), temperaturen i Tromsø nå (-4).
 // Forventet: ingenting i konsollen
 
+let spillere = 16
+// Spiller mengden endres ofte, når noen nye kommer in eller noen drar.
+let liv = 3
+// Dette endres når man dør.
+let fløya = 671
+// Fløya blir ca. 1mm høyere i året.
+let temperatur = -4
+//temperaturen endres konstant fra mange variabler.
 
 
 // ---------------- TEKST OG TALL ----------------
