@@ -19,9 +19,11 @@
 // Skriv ut begge på samme linje.
 // Forventet: Ola Nordmann  (men ditt navn)
 
-let firstname = "Brage";
-let lastname = "Andersen";
+console.log()
+let firstname = "Ola";
+let lastname = "Nordmann";
 console.log(firstname, lastname);
+console.log()
  
 // Oppgave 2 (grunnleggende)
 // Lag let hp = 100. Spilleren blir truffet av en isbjørn og mister 30 hp.
@@ -31,6 +33,7 @@ console.log(firstname, lastname);
 let hp = 100;
 hp = hp - 30;
 console.log(hp)
+console.log()
 
 // Oppgave 3 (grunnleggende)
 // Lag const PI = 3.14159. Prøv deretter å skrive PI = 3; og kjør fila.
@@ -49,6 +52,7 @@ const PI = 3.14159
 const MOMS = 0.25
 let pris = 200
 console.log("Pris med moms:", pris + pris * MOMS, "kr")
+console.log()
 
 // Oppgave 5 (avansert)
 // Lag disse som const eller let. Begrunn valgene i oppgavearket:
@@ -77,11 +81,16 @@ let temperatur = -4
 // Forventet: number
 //            string
 
+console.log(typeof(hp));
+console.log(typeof(firstname));
+console.log()
 
 // Oppgave 7 (grunnleggende)
 // Bruk backticks og ${} til å skrive ut en setning med firstname og hp.
 // Forventet: Ola har 70 hp
 
+console.log(`${firstname} har ${hp} hp`);
+console.log()
 
 // Oppgave 8 (middels)
 // Skriv ut 5 + 5, deretter "5" + 5, deretter Number("5") + 5.
@@ -90,6 +99,13 @@ let temperatur = -4
 //            55
 //            10
 
+console.log(5 + 5);
+console.log("5" + 5);
+console.log(Number("5") + 5);
+console.log()
+//Svar nummer 2 sier 55 fordi stringen '5' med en 5 etter viser 55, som att dette er heisann og ikke hei sann:
+    //console.log("hei"+"sann");
+    //Men hvis det hadde vært "hei","sann" ville det printet 'hei sann'.
 
 // Oppgave 9 (middels)
 // 17 elever skal deles i lag på 4. Bruk / og % .
@@ -98,6 +114,11 @@ let temperatur = -4
 // Forventet: 4 lag
 //            1 til overs
 
+const lag = 4;
+const elever = 17;
+console.log(Math.floor(elever/lag), "lag");
+console.log((17 % 4), "til overs.")
+console.log()
 
 // ---------------- VALG MED IF ----------------
 // if kjører koden bare når betingelsen er sann. else kjører ellers.
@@ -109,12 +130,22 @@ let temperatur = -4
 // const temp = -8. Skriv ut "Kuldegrader" hvis temp er under 0.
 // Forventet: Kuldegrader
 
+const temp = -8
+if (temp <= 0);
+    console.log("Kuldegrader");
+console.log()
 
 // Oppgave 11 (grunnleggende)
 // Bruk hp fra oppgave 2. Hvis hp er 0 eller mindre: "Game over".
 // Ellers: "Spillet fortsetter".
 // Forventet: Spillet fortsetter
 
+if (hp <= 0) {
+    console.log("Game over");
+} else {
+    console.log("Spillet fortsetter");
+}
+console.log()
 
 // Oppgave 12 (middels)
 // const klokka = 21. Bruk if, else if og else:
@@ -122,6 +153,15 @@ let temperatur = -4
 // Forventet: God kveld
 // Test også: endre klokka til 8 og kjør på nytt. Da skal det stå God morgen.
 
+const klokka = 21
+if (klokka < 10) {
+    console.log("God morgen");
+} else if (klokka < 18) {
+    console.log("God dag");
+} else {
+    console.log("God kveld");
+}
+console.log()
 
 // Oppgave 13 (middels)
 // Det er gode sjanser for nordlys når skydekket er under 30 OG klokka er 18 eller mer.
@@ -129,12 +169,32 @@ let temperatur = -4
 // Forventet: Gode sjanser for nordlys
 // Test også: skydekke = 80 skal gi: Dårlige sjanser i kveld
 
+const skydekke = 20
+const time = 22
+if ((skydekke < 30) && (time >= 18)) {
+    console.log("Gode sjanser for nordlys");
+} else {
+    console.log("Dårlige sjanser i kveld")
+}
+console.log()
 
 // Oppgave 14 (avansert)
 // Billett til Fjellheisen: barn under 12 betaler 50 kr, 67 år og eldre betaler 60 kr,
 // alle andre betaler 100 kr. Lag let alder og skriv ut prisen.
 // Forventet: alder 8 -> 50 kr,  alder 30 -> 100 kr,  alder 70 -> 60 kr
 
+let alder = X = 70
+if (X <= 0) {
+    console.log("Skriv inn riktig alder");
+}else if (X < 12) {
+    console.log(50);
+} else if (X < 67) {
+    console.log(100);
+} else {
+    console.log(60);
+}
+console.log()
+//Alternativt fjerne X og bytte den til alder, funker på samme måte.
 
 // ---------------- LØKKER ----------------
 // En løkke gjentar kode.
@@ -148,6 +208,7 @@ let temperatur = -4
 //            3
 //            4
 //            5
+
 
 
 // Oppgave 16 (grunnleggende)
