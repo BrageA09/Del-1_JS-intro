@@ -104,7 +104,7 @@ console.log("5" + 5);
 console.log(Number("5") + 5);
 console.log()
 //Svar nummer 2 sier 55 fordi stringen '5' med en 5 etter viser 55, som att dette er heisann og ikke hei sann:
-    //console.log("hei"+"sann");
+    //console.log("hei"+"sann")
     //Men hvis det hadde vært "hei","sann" ville det printet 'hei sann'.
 
 // Oppgave 9 (middels)
@@ -117,7 +117,7 @@ console.log()
 const lag = 4;
 const elever = 17;
 console.log(Math.floor(elever/lag), "lag");
-console.log((17 % 4), "til overs.")
+console.log((elever % lag), "til overs.")
 console.log()
 
 // ---------------- VALG MED IF ----------------
@@ -320,7 +320,14 @@ console.log()
 // Forventet: 3
 
 const temperaturer = [-4, -6, -2, 1, -8, -11, -3];
-for ()
+let dager = 0;
+for (let i = 0; i < temperaturer.length; i++) {
+    if (temperaturer[i] < -5) {
+        dager = dager + 1
+    }
+}
+console.log(dager);
+console.log()
 
 // Oppgave 24 (avansert)
 // const inventory = ["sverd", "drikk", "skjold", "drikk", "fiskestang", "drikk"];
@@ -329,8 +336,26 @@ for ()
 // Forventet: 3
 //            [ 'sverd', 'skjold', 'fiskestang' ]
 
+const inventory = ["sverd", "drikk", "skjold", "drikk", "fiskestang", "drikk"];
+let drikk = 0
+for (let i = 0; i < inventory.length;i++) {
+    if (inventory[i] === "drikk")
+        drikk = drikk + 1
+    }
+    console.log(drikk);
+
+let inventory1 = [];
+for (let i = 0; i < inventory.length;i++) {
+    if (inventory[i] !== "drikk") {
+        inventory1.push(inventory[i]);
+    }
+}
+console.log(inventory1)
+console.log()
 
 // Oppgave 25 (avansert)
 // inventory er const, men push virker likevel. Hvorfor?
 // Skriv svaret i oppgavearket.
 // Forventet: ingenting i konsollen
+
+//Man kan endre ting i den, men variablen er låst, så f.eks 'inventory = [x,y,z]' hadde ikke funket, siden den er const.
