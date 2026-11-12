@@ -209,25 +209,50 @@ console.log()
 //            4
 //            5
 
-
+for (let i = 1; i < 6; i++) {
+    console.log(i);
+}
+console.log()
 
 // Oppgave 16 (grunnleggende)
 // En rakett skal skytes opp fra Andøya. Tell ned fra 10 til 1 med en for-løkke,
 // og skriv ut "Liftoff!" etter løkka.
 // Forventet: 10, 9, 8 ... 1 (én per linje), så Liftoff!
 
+for (let i = 10; i > 0; i--){
+    console.log(i);
+    if (i < 2) {
+        console.log("Liftoff!");
+    }
+}
+console.log()
 
 // Oppgave 17 (middels)
 // Regn ut summen av alle tallene fra 1 til 100 med en løkke.
 // Tips: let sum = 0; før løkka.
 // Forventet: 5050
 
+let sum = 0;
+for (let i = 0; i <= 100; i++) {
+    sum = sum + i
+}
+console.log(sum);
+console.log()
 
 // Oppgave 18 (middels)
 // Lag let bossHp = 100. Hvert slag tar 15 hp. Bruk en while-løkke og tell
 // hvor mange slag som trengs før bossHp er 0 eller mindre.
 // Forventet: 7 slag
 
+let bossHp = 100
+const hit = 15
+let slag = 0
+for (bossHp;bossHp >= 0;bossHp - hit) {
+    bossHp = bossHp - hit
+    slag = slag + 1
+}
+console.log(slag, "slag");
+console.log()
 
 // Oppgave 19 (avansert)
 // Skriv ut tallene 1 til 15. Er tallet delelig med 3, skriv "Nord" i stedet.
@@ -235,6 +260,18 @@ console.log()
 // Tips: tall % 3 === 0 betyr delelig med 3.
 // Forventet: 1, 2, Nord, 4, Lys, Nord, 7, 8, Nord, Lys, 11, Nord, 13, 14, Nordlys
 
+for (let i = 1; i < 16; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("Nordlys")
+    } else if (i % 3 === 0) {
+        console.log("Nord")
+    } else if (i % 5 === 0) {
+        console.log("Lys")
+    } else {
+        console.log(i)
+    }
+}
+console.log()
 
 // ---------------- ARRAYS ----------------
 // En array er en liste: const fag = ["Utvikling", "Driftstøtte"];
@@ -252,6 +289,10 @@ console.log()
 // Forventet: Tromsø
 //            5
 
+const byer = ["Tromsø", "Bodø", "Alta", "Harstad", "Narvik"];
+console.log(byer[0]);
+console.log(byer.length)
+console.log()
 
 // Oppgave 21 (grunnleggende)
 // Legg til "Hammerfest" med push, og skriv ut den siste byen og det nye antallet.
@@ -259,17 +300,27 @@ console.log()
 // Forventet: Hammerfest
 //            6
 
+byer.push("Hammerfest");
+console.log(byer[byer.length - 1]);
+console.log(byer.length);
+console.log()
 
 // Oppgave 22 (middels)
 // Skriv ut alle byene med en for-løkke.
 // Forventet: Tromsø, Bodø, Alta, Harstad, Narvik, Hammerfest (én per linje)
 
+for (let i = 0; i < byer.length; i++) {
+    console.log(byer[i]);
+}
+console.log()
 
 // Oppgave 23 (middels)
 // const temperaturer = [-4, -6, -2, 1, -8, -11, -3];
 // Tell hvor mange dager det var kaldere enn -5. Bruk for og if.
 // Forventet: 3
 
+const temperaturer = [-4, -6, -2, 1, -8, -11, -3];
+for ()
 
 // Oppgave 24 (avansert)
 // const inventory = ["sverd", "drikk", "skjold", "drikk", "fiskestang", "drikk"];
